@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sunway College Ipoh Wellness Connect</title>
+<meta name="description" content="A comedy action-adventure game about physical and mental health.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<section id="home" class="screen on">
+  <div class="logo" aria-hidden="true">🏥🚗🎯</div>
+  <h1>Sunway College Ipoh<br>Wellness Connect</h1>
+  <p class="lead">Join Dr. Giggles on a wild day at Wellness Town. Shoot targets, race through gates and solve real-life health puzzles, all while learning how to look after your body and mind.</p>
+  <div class="card">
+    <h2>What you will learn</h2>
+    <ul>
+      <li>Why physical and mental health both matter</li>
+      <li>How to take care of yourself every day</li>
+      <li>Warning signs of major depressive disorder, other mood disorders and schizophrenia, and when to ask for help</li>
+    </ul>
+    <p class="small">15 questions · about 15 minutes · ages 6 to 70 · no timer pressure</p>
+  </div>
+  <label class="check"><input type="checkbox" id="untimed"> Untimed focus mode (everything stands still, answer by tapping)</label>
+  <div class="row"><button class="btn big" id="playBtn">Play</button><button class="btn alt" id="howBtn">How to play</button></div>
+  <p class="small note">Educational game only. It cannot diagnose anyone. If you are worried about your health, speak to a doctor or counsellor. In an emergency in Malaysia, call 999.</p>
+</section>
+
+<section id="how" class="screen">
+  <h1>How to play</h1>
+  <div class="card">
+    <h2>Three kinds of rounds</h2>
+    <p><b>🎯 Shooting:</b> answers are on moving signs. Click or tap one to shoot it. Keyboard: press 1, 2, 3 or 4.</p>
+    <p><b>🚗 Racing:</b> read the answers (A to D), press Start engine, then steer into your gate. Keyboard: ← → or A / D. Mobile: tap a lane or the arrow buttons.</p>
+    <p><b>🧩 Problem solving:</b> read the situation and pick the best choice. Click, tap, or press 1 to 4.</p>
+    <h2>Scoring</h2>
+    <p>Each question is worth 10 points if you get it right on the first try. Missing a shot or crashing never costs points: only your answer counts, not your speed or aim.</p>
+    <p>After each answer you see an explanation. Press <b>Continue</b> when you are ready. At the end you get a star rating and can retry the questions you missed for practice.</p>
+    <p>Untimed focus mode turns every round into simple multiple choice.</p>
+  </div>
+  <button class="btn big" id="backHome">Back to home</button>
+</section>
+
+<section id="game" class="screen">
+  <div class="bar">
+    <button class="btn small" id="gHome">Home</button>
+    <button class="btn small" id="gRestart">Restart</button>
+    <span class="score" aria-live="polite">Score: <b id="score">0</b></span>
+  </div>
+  <div class="prog" role="progressbar" aria-label="Progress"><div id="progFill"></div></div>
+  <p class="small" id="qmeta"></p>
+  <h2 id="qtext" class="qtext"></h2>
+  <p class="small" id="hint"></p>
+  <div id="legend"></div>
+  <div id="arena"></div>
+  <div id="carBtns" class="row hidden">
+    <button class="btn" id="goBtn">Start engine</button>
+    <button class="btn" id="leftBtn" aria-label="Move left">◀</button>
+    <button class="btn" id="rightBtn" aria-label="Move right">▶</button>
+  </div>
+  <div id="feedback" class="hidden" role="status" aria-live="polite">
+    <h3 id="fbTitle"></h3><p id="fbText"></p><p id="fbQuip" class="quip"></p>
+    <button class="btn big" id="contBtn">Continue</button>
+  </div>
+</section>
+
+<section id="results" class="screen">
+  <h1>Mission complete!</h1>
+  <div class="card center"><div class="stars" id="stars"></div><p class="bigscore"><span id="finalScore">0</span> / <span id="maxScore">0</span></p><p id="rating"></p><p id="pracMsg" class="small"></p></div>
+  <div class="row">
+    <button class="btn" id="retryBtn">Retry missed questions</button>
+    <button class="btn" id="againBtn">Play again</button>
+    <button class="btn alt" id="rHome">Home</button>
+  </div>
+  <h2>What we learned</h2>
+  <div id="review"></div>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

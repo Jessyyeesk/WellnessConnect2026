@@ -2,26 +2,26 @@
  t = topic, q = situation/question, o = 4 answer options, a = index of correct option (0-3), e = explanation.
  Options are shuffled automatically. Keep exactly 4 options per question. */
 const QUESTIONS = [
- {t:"Why health matters",q:"Dr. Giggles says: \"Health is more than not being sick.\" Which description is the best?",o:["Health means body and mind both working well, so you can enjoy life and cope with daily demands","Health only means having no illness in the body","Health only matters when you are old","Mental health matters only for people with a diagnosis"],a:0,e:"Physical and mental health are connected. Good health helps you learn, work, enjoy relationships and cope with stress at every age."},
- {t:"Physical health",q:"Uncle Ben, 58, sits all day, skips breakfast and sleeps 4 hours. Which change helps his physical health most?",o:["Regular movement, balanced meals, water and 7 to 9 hours of sleep","Drinking more coffee to stay awake","Taking vitamins instead of changing habits","Exercising once a month very hard"],a:0,e:"Regular activity, balanced eating, hydration and enough sleep are the foundation of physical health. Small daily habits beat occasional extremes."},
- {t:"Mental health",q:"Aisyah, 12, feels worried before tests but still copes, laughs with friends and sleeps fine. What is this?",o:["A normal feeling that everyone has sometimes","Definitely a serious mental illness","A sign she is weak","Something that must be hidden"],a:0,e:"Everyone feels stress or worry at times. It becomes a concern when feelings are intense, last a long time and get in the way of daily life."},
- {t:"Major depressive disorder",q:"For three weeks, Hafiz feels sad and empty most days, has lost interest in football, sleeps badly and feels tired. Which condition do these signs match?",o:["Major depressive disorder","A simple cold","Normal tiredness after a busy day","Schizophrenia"],a:0,e:"Major depressive disorder involves low mood or loss of interest most of the day, nearly every day, for at least 2 weeks, often with sleep, energy and appetite changes."},
- {t:"Myths about depression",q:"A cousin says: \"Depression is just laziness. Tell him to snap out of it.\" What is the best response?",o:["Depression is a real medical condition and it is treatable with support, therapy and sometimes medicine","You are right, he just needs willpower","Only rich people get depression","It can never be treated"],a:0,e:"Depression is not a character flaw. Treatment such as talking therapy, medicine and lifestyle support helps many people recover."},
- {t:"Mood disorders",q:"What is a mood disorder?",o:["A condition where a person's mood is persistently very low, very high, or swings, affecting daily life","Being in a bad mood after losing a game","A problem with the stomach","Something only teenagers get"],a:0,e:"Mood disorders include major depressive disorder and bipolar disorder. They are more intense and longer lasting than everyday ups and downs."},
- {t:"Bipolar disorder",q:"Lim has days of very high energy, little sleep and big risky plans, then weeks of deep sadness. Which mood disorder is most likely?",o:["Bipolar disorder","Seasonal sneezing","Ordinary excitement","Dehydration"],a:0,e:"Bipolar disorder involves episodes of mania or hypomania (high energy, less need for sleep) alternating with depression. A professional must assess it."},
- {t:"Urgent warning signs",q:"A friend says they feel hopeless and have thoughts of ending their life. What should you do?",o:["Take it seriously, stay with them, and get urgent help from a doctor, crisis line or emergency services (999 in Malaysia)","Promise to keep it secret and say nothing","Tell them to cheer up","Change the subject"],a:0,e:"Thoughts of self-harm are a medical emergency. Listen without judgement, do not leave them alone if they are in danger, and involve professionals right away."},
- {t:"Schizophrenia",q:"Mr. Tan, 25, hears voices others cannot hear and firmly believes neighbours are spying on him. Which condition includes these signs?",o:["Schizophrenia","Fear of heights","Mild homesickness","Hay fever"],a:0,e:"Schizophrenia can involve hallucinations (such as hearing voices), delusions (fixed false beliefs), disorganised thinking and reduced motivation or emotion."},
- {t:"Myths about schizophrenia",q:"A comedy show says schizophrenia means \"split personality\". Is that correct?",o:["No. Schizophrenia affects thinking and perception. It is not multiple personalities","Yes, it means two people live in one body","Yes, and the person is always violent","No, it only affects children"],a:0,e:"Schizophrenia is not split personality, and most people with it are not violent. They are more likely to be harmed or treated unfairly than to harm others."},
- {t:"Treatment and recovery",q:"Which statement about schizophrenia treatment is true?",o:["Medicine, therapy and family and community support help many people live full lives, and early help improves outcomes","Nothing helps, so do not bother","Stopping medicine as soon as you feel better is always safe","Only hospitals can ever help"],a:0,e:"Treatment is usually long term. Changes to medicine should only be made with a doctor, since stopping suddenly can bring symptoms back."},
- {t:"Supporting others",q:"Your colleague seems very down lately. What is the most helpful first step?",o:["Check in privately, listen without judging and encourage them to see a professional","Gossip about it with the team","Tell them everyone has problems","Avoid them"],a:0,e:"Listening kindly and encouraging professional help reduces isolation and stigma. You do not have to fix the problem yourself."},
- {t:"Daily self-care",q:"Which routine best protects both physical and mental health?",o:["Regular sleep, movement, healthy food, time with people you trust and limited alcohol","Staying up late and avoiding people","Skipping meals when stressed","Using alcohol to relax every night"],a:0,e:"Sleep, activity, nutrition and social connection support mood and body. Alcohol and isolation tend to make low mood worse."},
- {t:"When to seek help",q:"When should you talk to a doctor or counsellor about your mood?",o:["When low mood, strange experiences or extreme highs last more than about two weeks or disrupt daily life","Only after you have lost your job and home","Never, it always goes away alone","Only if someone else notices first"],a:0,e:"Seeking help early is a sign of strength. Persistent symptoms that affect sleep, school, work or relationships deserve a professional check."},
- {t:"New example: apply what you learned",q:"FINAL CHALLENGE: Madam Mei Ling, 45, has felt empty for 4 weeks, lost interest in gardening, sleeps poorly and feels worthless. She has no voices, no extreme highs. What is the best description and next step?",o:["Signs of major depressive disorder: see a doctor or counsellor soon","Schizophrenia: wait and see","Normal ageing: nothing can be done","Bipolar mania: avoid all contact"],a:0,e:"Low mood and loss of interest for over 2 weeks, with sleep problems and worthlessness, fit depression. No hallucinations or highs points away from schizophrenia or bipolar mania. See a professional."}
+ {t:"Blood pressure basics",q:"Uncle Raju, 52, feels fine, but his clinic reading is 150/95 on two visits. What does this most likely mean?",o:["He has high blood pressure (hypertension) even though he feels fine, and should follow up with a doctor","He is healthy because he has no symptoms","It is only stress and never needs checking again","It means low blood pressure"],a:0,e:"High blood pressure often has no symptoms, which is why it is called a silent danger. Repeated readings of about 140/90 or higher need a doctor's review, because it raises the risk of stroke and heart disease."},
+ {t:"Blood pressure coping",q:"Which set of habits helps lower blood pressure?",o:["Less salt, more fruit and vegetables, regular exercise, a healthy weight and no smoking","More salty snacks and instant noodles for energy","Staying still all day to save energy","Skipping medicine when you feel well"],a:0,e:"Cutting salt (under about 1 teaspoon a day), eating more fruit and vegetables, being active around 150 minutes a week and not smoking all help. Medicine prescribed by a doctor should continue even when you feel well."},
+ {t:"Blood pressure warning signs",q:"Madam Lee has a sudden severe headache, chest pain and blurred vision, and her home blood pressure reading is very high. What should she do?",o:["Seek emergency care straight away (999 in Malaysia)","Sleep it off and check tomorrow","Drink a sugary drink","Wait for the weekend clinic"],a:0,e:"A very high reading with severe headache, chest pain, vision change, weakness or confusion can signal a stroke or heart emergency. Get urgent medical help."},
+ {t:"Checking blood pressure",q:"What is the best way to check blood pressure at home?",o:["Sit quietly for 5 minutes, feet flat, arm supported, and record readings on several days","Measure right after running","Measure while talking on the phone","Check once a year only"],a:0,e:"Rest, correct posture and repeated readings give a reliable picture. Share your record with your doctor."},
+ {t:"Diabetes basics",q:"Auntie Siti is always thirsty, urinates often, feels tired and her cuts heal slowly. Which condition should she ask her doctor about?",o:["Diabetes","A simple cold","Too much sleep","Hay fever"],a:0,e:"Extreme thirst, frequent urination, tiredness, blurred vision and slow healing are common diabetes signs. A blood test confirms it. Many people with type 2 diabetes have mild or no symptoms, so regular screening helps."},
+ {t:"Diabetes coping",q:"Which daily plan best helps someone manage type 2 diabetes?",o:["Balanced meals with less sugar, regular activity, medicine as prescribed and blood sugar checks","Skipping meals and then eating a huge dinner","Stopping medicine when readings look normal","Drinking sweet drinks to stay energetic"],a:0,e:"Steady healthy eating, movement, taking medicine as directed and monitoring keep blood sugar in range. Normal readings mean the plan is working, not that it can stop."},
+ {t:"Low blood sugar",q:"A person with diabetes becomes shaky, sweaty and confused after skipping lunch. What is the best first action if they are awake and can swallow?",o:["Give fast sugar such as juice or glucose tablets, then recheck and eat a snack","Give nothing and let them rest","Give salty chips only","Make them exercise"],a:0,e:"These are signs of low blood sugar (hypoglycaemia). Fast sugar raises it quickly. If they cannot swallow or become unconscious, call 999."},
+ {t:"Preventing diabetes",q:"Which actions lower the risk of type 2 diabetes?",o:["Healthy weight, regular exercise, fewer sugary drinks and regular health screening","Drinking soft drinks daily","Avoiding all exercise","Never visiting a clinic"],a:0,e:"Lifestyle changes greatly reduce risk. Screening helps catch high blood sugar early, when it is easiest to manage."},
+ {t:"Stress",q:"Before exams, Daniel has a racing heart, tight shoulders and trouble sleeping, but feels better after the exams. What is this?",o:["Stress, a normal body reaction to pressure","A broken heart","Definitely diabetes","A permanent illness"],a:0,e:"Stress is the body's response to demands. Short-term stress is normal, but long-term stress can raise blood pressure and affect sleep and mood."},
+ {t:"Stress coping",q:"Which is a healthy way to cope with stress?",o:["Take short breaks, move your body, plan tasks, sleep well and talk to someone you trust","Skip sleep to do more","Use alcohol to switch off every night","Keep everything to yourself"],a:0,e:"Rest, activity, planning and social support reduce stress. Alcohol and isolation tend to make stress worse."},
+ {t:"Anxiety",q:"Mei worries constantly, feels restless, her heart pounds and she avoids school events for months. What does this suggest?",o:["Possible anxiety that deserves a check with a doctor or counsellor","Normal behaviour needing no help","Laziness","High blood sugar only"],a:0,e:"Anxiety becomes a concern when worry is intense, lasts weeks or months and stops daily activities. Therapy, skills and sometimes medicine help."},
+ {t:"Anxiety coping",q:"Sam suddenly feels panicky in a crowded mall. Which quick coping skill can help?",o:["Slow breathing (in for 4, out for 6) and grounding: name 5 things you see","Hold your breath","Drink three strong coffees","Run away and never go out again"],a:0,e:"Slow breathing and grounding calm the body's alarm system. Avoiding places makes anxiety stronger, so ask a professional for step-by-step help."},
+ {t:"Depression",q:"For over two weeks, Hana feels sad and empty, has lost interest in hobbies, sleeps badly and feels worthless. What should she do?",o:["See a doctor or counsellor, because these may be signs of depression","Wait years and hope it disappears","Tell herself to snap out of it","Stay away from everyone"],a:0,e:"Low mood or loss of interest for at least 2 weeks with sleep, energy or worth changes may be depression. It is common and treatable."},
+ {t:"Depression coping and crisis",q:"Which helps someone coping with depression, and what if they think about ending their life?",o:["Daily routine, gentle activity, staying in touch, therapy or medicine, and urgent help (999 or a crisis line) for suicidal thoughts","Isolation and no routine, and keep suicidal thoughts secret","Alcohol to numb feelings","Stopping treatment early"],a:0,e:"Routine, movement, connection and professional treatment help. Thoughts of self-harm are an emergency: stay with the person and get immediate help."},
+ {t:"New example: apply what you learned",q:"FINAL CHALLENGE: Mr. Chong, 48, has high blood pressure and diabetes. After a stressful month he sleeps badly and feels hopeless. What is the best plan?",o:["Keep taking medicines, cut salt and sugar, move daily, practise relaxation and talk to a doctor or counsellor about his mood","Stop all medicine since he is stressed","Drink alcohol to sleep","Hide it from everyone"],a:0,e:"Physical and mental health affect each other. Keep treatment going, use healthy habits and coping skills, and get support for low mood."}
 ];
-const QUIPS=["Dr. Giggles adjusts his oversized stethoscope.","A pigeon in a lab coat nods approvingly.","The town mascot, Sir Wobbles the Banana, applauds.","Somewhere, a nurse high-fives a traffic cone."];
-const MODES=["pick","shoot","race"];
+const QUIPS=["Dr. Giggles honks the horn in approval.","A pigeon in a racing helmet gives a thumbs up.","Sir Wobbles the Banana waves a chequered flag.","Somewhere, a traffic cone cheers."];
 const $=id=>document.getElementById(id);
 let S={},raf=0;
+const keys={gas:false,brake:false};
 
 function show(id){document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("on",s.id===id));window.scrollTo(0,0);}
 function stop(){cancelAnimationFrame(raf);raf=0;}
@@ -29,94 +29,82 @@ function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random
 
 function start(){
   stop();
-  S={list:QUESTIONS.map((_,i)=>i),i:0,score:0,missed:[],done:{},practice:false,untimed:$("untimed").checked,locked:true};
+  S={list:QUESTIONS.map((_,i)=>i),i:0,score:0,missed:[],done:{},practice:false,untimed:$("untimed").checked,locked:true,stray:[]};
   $("score").textContent=0;show("game");load();
 }
 function load(){
   stop();
   const n=S.list[S.i],q=QUESTIONS[n];
-  S.locked=false;S.n=n;
-  S.opts=shuffle(q.o.map((t,j)=>({t,j})));
-  S.mode=(S.untimed||S.practice||n===QUESTIONS.length-1)?"pick":MODES[n%3];
+  S.locked=false;S.n=n;S.opts=shuffle(q.o.map((t,j)=>({t,j})));
+  S.mode=S.untimed?"pick":"race";
   $("progFill").style.width=(S.i/S.list.length*100)+"%";
   $("qmeta").textContent=(S.practice?"Practice · ":"")+"Question "+(S.i+1)+" of "+S.list.length+" · "+q.t;
   $("qtext").textContent=q.q;
-  $("feedback").classList.add("hidden");$("carBtns").classList.add("hidden");
+  $("feedback").classList.add("hidden");$("carBtns").classList.add("hidden");$("speedo").classList.add("hidden");
   $("legend").innerHTML="";
-  const ar=$("arena");ar.innerHTML="";ar.className="";
-  const L="ABCD";
+  const ar=$("arena");ar.innerHTML="";ar.className="";ar.removeAttribute("style");
   if(S.mode==="pick"){
-    ar.className="picks";$("hint").textContent="Pick the best answer (click, tap, or press 1 to 4).";
+    ar.className="picks";$("hint").textContent="Quiz mode: pick the best answer (click, tap, or press 1 to 4). No driving needed.";
     S.opts.forEach((o,k)=>{const b=document.createElement("button");b.className="pick";b.textContent=(k+1)+". "+o.t;b.onclick=()=>answer(k);ar.appendChild(b);});
-  }else if(S.mode==="shoot"){
-    ar.className="shoot";$("hint").textContent="🎯 Shoot the sign with the best answer: click or tap it, or press 1 to 4. Misses cost nothing.";
-    S.t=S.opts.map((o,k)=>{const b=document.createElement("button");b.className="target";b.style.top=(8+k*72)+"px";b.innerHTML="<i>"+(k+1)+"</i><span></span>";b.lastChild.textContent=o.t;b.onclick=()=>answer(k);ar.appendChild(b);return {el:b,x:Math.random()*100,v:(40+Math.random()*50)*(k%2?-1:1)};});
-    S.last=performance.now();raf=requestAnimationFrame(moveTargets);
-  }else{
-    ar.className="race";$("hint").textContent="🚗 Read the answers, press Start engine, then steer into the gate you choose (← → or A / D, or tap a lane).";
-    S.opts.forEach((o,k)=>{const d=document.createElement("div");d.textContent=L[k]+". "+o.t;$("legend").appendChild(d);});
-    S.g=[];S.car=1;
-    for(let k=0;k<4;k++){const ln=document.createElement("div");ln.className="lane";ln.onclick=()=>{S.car=k;placeCar();};const g=document.createElement("div");g.className="gate";g.textContent=L[k];ln.appendChild(g);ar.appendChild(ln);S.g.push(g);}
-    S.carEl=document.createElement("div");S.carEl.className="car";S.carEl.textContent="🚗";ar.appendChild(S.carEl);
-    S.y=-60;S.run=false;placeCar();$("carBtns").classList.remove("hidden");$("goBtn").disabled=false;
+    return;
   }
+  ar.className="race";
+  $("hint").textContent="🏎️ Read answers A to D. Hold GAS to speed up the track and steer into the gate you choose. Your speed never changes your score.";
+  S.opts.forEach((o,k)=>{const d=document.createElement("div");d.textContent="ABCD"[k]+". "+o.t;$("legend").appendChild(d);});
+  for(let k=0;k<4;k++){
+    const ln=document.createElement("div");ln.className="lane";ln.onclick=()=>{steerTo(k);};
+    const g=document.createElement("div");g.className="gate";g.textContent="ABCD"[k];ln.appendChild(g);ar.appendChild(ln);
+  }
+  S.carEl=document.createElement("div");S.carEl.className="car";S.carEl.textContent="🏎️";ar.appendChild(S.carEl);
+  S.lane=1;S.pos=0;S.speed=0;S.last=performance.now();
+  $("carBtns").classList.remove("hidden");$("speedo").classList.remove("hidden");
+  drive(S.last);
 }
-function moveTargets(now){
-  if(S.locked||S.mode!=="shoot")return;
-  const dt=Math.min(now-S.last,50)/1000;S.last=now;
-  const W=$("arena").clientWidth,w=W*0.62,max=Math.max(W-w,1);
-  S.t.forEach(t=>{t.x+=t.v*dt*(max/300);if(t.x<0){t.x=0;t.v=Math.abs(t.v);}if(t.x>max){t.x=max;t.v=-Math.abs(t.v);}t.el.style.transform="translateX("+t.x+"px)";});
-  raf=requestAnimationFrame(moveTargets);
-}
-function placeCar(){S.carEl.style.left=(S.car*25)+"%";}
-function go(){if(S.mode!=="race"||S.run||S.locked)return;S.run=true;$("goBtn").disabled=true;S.last=performance.now();raf=requestAnimationFrame(driveGates);}
-function driveGates(now){
+function steerTo(k){if(S.mode==="race"&&!S.locked){S.lane=Math.max(0,Math.min(3,k));S.carEl.style.left=(S.lane*25)+"%";}}
+function steer(d){steerTo(S.lane+d);}
+function drive(now){
   if(S.locked||S.mode!=="race")return;
   const dt=Math.min(now-S.last,50)/1000;S.last=now;
-  S.y+=dt*34;
-  S.g.forEach(g=>g.style.top=S.y+"px");
-  if(S.y+48>=$("arena").clientHeight-60){answer(S.car);return;}
-  raf=requestAnimationFrame(driveGates);
+  if(keys.gas)S.speed+=70*dt;
+  if(keys.brake)S.speed-=160*dt;else if(!keys.gas)S.speed-=25*dt;
+  S.speed=Math.max(0,Math.min(100,S.speed));
+  S.pos+=S.speed*dt*0.13;
+  const H=$("arena").clientHeight,range=H-54-50-8;
+  S.carEl.style.bottom=(8+Math.min(S.pos,100)/100*range)+"px";
+  S.carEl.style.left=(S.lane*25)+"%";
+  $("arena").style.backgroundPositionY=(S.pos*18)+"px";
+  $("speedVal").textContent=Math.round(S.speed*1.2);
+  if(S.pos>=100){answer(S.lane);return;}
+  raf=requestAnimationFrame(drive);
 }
-function steer(d){if(S.mode==="race"&&!S.locked){S.car=Math.max(0,Math.min(3,S.car+d));placeCar();}}
-
 function answer(k){
-  if(S.locked||k<0||k>3)return;       /* locked flag stops double scoring */
+  if(S.locked||k<0||k>3)return;       /* lock prevents duplicate scoring */
   S.locked=true;stop();
   const q=QUESTIONS[S.n],ok=S.opts[k].j===q.a;
-  if(!S.practice){
-    if(ok)S.score+=10;else S.missed.push(S.n);
-    S.done[S.n]=ok;
-    $("score").textContent=S.score;
-  }
+  if(S.practice){if(!ok)S.stray.push(S.n);}
+  else{if(ok)S.score+=10;else S.missed.push(S.n);S.done[S.n]=ok;$("score").textContent=S.score;}
   if(S.mode==="pick"){[...$("arena").children].forEach((b,i)=>{b.disabled=true;if(S.opts[i].j===q.a)b.classList.add("ok");else if(i===k)b.classList.add("bad");});}
-  const fb=$("feedback");
-  fb.className=ok?"good":"wrong";
-  $("fbTitle").textContent=ok?"✅ Correct!":"❌ Not quite";
+  else{[...$("legend").children].forEach((d,i)=>{if(S.opts[i].j===q.a)d.classList.add("ok");else if(i===k)d.classList.add("bad");});}
+  const fb=$("feedback");fb.className=ok?"good":"wrong";
+  $("fbTitle").textContent=ok?"✅ Correct! You crossed the finish line first.":"❌ Wrong gate";
   $("fbText").textContent=(ok?"":"Best answer: "+q.o[q.a]+". ")+q.e+(S.practice?" (Practice does not change your score.)":"");
   $("fbQuip").textContent=QUIPS[Math.floor(Math.random()*QUIPS.length)];
-  $("carBtns").classList.add("hidden");
+  $("carBtns").classList.add("hidden");$("speedo").classList.add("hidden");
   $("contBtn").textContent=(S.i===S.list.length-1)?"See my results":"Continue";
   fb.scrollIntoView({behavior:"smooth",block:"nearest"});
   $("contBtn").focus({preventScroll:true});
 }
 function next(){
   if(!S.locked||$("feedback").classList.contains("hidden"))return;
-  S.i++;
-  if(S.i>=S.list.length)finish();else load();
+  S.i++;if(S.i>=S.list.length)finish();else load();
 }
 function finish(){
-  stop();
-  $("progFill").style.width="100%";
-  if(S.practice){
-    const right=S.list.length-S.missed2.length;
-    S.practiceMsg="Practice round: "+right+" of "+S.list.length+" correct. Keep reviewing the explanations below!";
-  }
+  stop();$("progFill").style.width="100%";
   const max=QUESTIONS.length*10,pct=S.score/max,st=pct>=.85?3:pct>=.6?2:pct>=.3?1:0;
   $("stars").textContent="⭐".repeat(st)+"☆".repeat(3-st);
   $("finalScore").textContent=S.score;$("maxScore").textContent=max;
-  $("rating").textContent=["Good start! Review the explanations and try again.","Nice work, Wellness Rookie!","Great job, Wellness Hero!","Superb! You are a Wellness Champion!"][st];
-  $("pracMsg").textContent=S.practiceMsg||"";
+  $("rating").textContent=["Good start! Review the explanations and race again.","Nice driving, Wellness Rookie!","Great job, Wellness Racer!","Superb! You are a Wellness Champion!"][st];
+  $("pracMsg").textContent=S.practice?"Practice round: "+(S.list.length-S.stray.length)+" of "+S.list.length+" correct.":"";
   $("retryBtn").classList.toggle("hidden",S.missed.length===0);
   const rv=$("review");rv.innerHTML="";
   QUESTIONS.forEach((q,n)=>{
@@ -127,33 +115,33 @@ function finish(){
   });
   show("results");
 }
-function retryMissed(){
-  stop();
-  S.list=S.missed.slice();S.missed2=[];S.i=0;S.practice=true;
-  /* practice answers do not change score or review */
-  S.missedKeep=S.missed.slice();
-  show("game");load();
-}
-/* After a practice round, finish() reuses saved score and missed list */
-const origAnswer=answer;
-answer=function(k){
-  if(S.practice&&!S.locked){const q=QUESTIONS[S.n];if(k>=0&&k<4&&S.opts[k].j!==q.a)S.missed2.push(S.n);}
-  origAnswer(k);
-};
+function retryMissed(){stop();S.list=S.missed.slice();S.stray=[];S.i=0;S.practice=true;show("game");load();}
 
-$("playBtn").onclick=start;$("againBtn").onclick=start;$("gRestart").onclick=()=>{if(confirm("Restart the game from question 1?"))start();};
+function hold(id,key){
+  const b=$(id),on=e=>{e.preventDefault();keys[key]=true;},off=()=>{keys[key]=false;};
+  b.addEventListener("pointerdown",on);["pointerup","pointerleave","pointercancel","blur"].forEach(ev=>b.addEventListener(ev,off));
+}
+hold("gasBtn","gas");hold("brakeBtn","brake");
+$("playBtn").onclick=start;$("againBtn").onclick=start;
+$("gRestart").onclick=()=>{if(confirm("Restart from question 1?"))start();};
 $("howBtn").onclick=()=>show("how");$("backHome").onclick=()=>show("home");
 $("gHome").onclick=()=>{if(confirm("Return to home? Your progress will be lost.")){stop();show("home");}};
 $("rHome").onclick=()=>{stop();show("home");};
 $("contBtn").onclick=next;$("retryBtn").onclick=retryMissed;
-$("goBtn").onclick=go;$("leftBtn").onclick=()=>steer(-1);$("rightBtn").onclick=()=>steer(1);
+$("leftBtn").onclick=()=>steer(-1);$("rightBtn").onclick=()=>steer(1);
 document.addEventListener("keydown",e=>{
   if(!$("game").classList.contains("on")||e.target.tagName==="INPUT")return;
   const k=e.key.toLowerCase();
-  if("1234".includes(k)&&k.length===1&&(S.mode==="pick"||S.mode==="shoot"))answer(+k-1);
-  else if(S.mode==="race"){
-    if(k==="arrowleft"||k==="a"){steer(-1);e.preventDefault();}
-    else if(k==="arrowright"||k==="d"){steer(1);e.preventDefault();}
-    else if((k===" "||k==="enter")&&!S.run&&!S.locked&&document.activeElement.tagName!=="BUTTON"){go();e.preventDefault();}
-  }
+  if(S.mode==="pick"){if(["1","2","3","4"].includes(k))answer(+k-1);return;}
+  if(S.mode!=="race"||S.locked)return;
+  if(k==="arrowup"||k==="w"||k===" "){keys.gas=true;e.preventDefault();}
+  else if(k==="arrowdown"||k==="s"){keys.brake=true;e.preventDefault();}
+  else if(k==="arrowleft"||k==="a"){steer(-1);e.preventDefault();}
+  else if(k==="arrowright"||k==="d"){steer(1);e.preventDefault();}
+  else if(["1","2","3","4"].includes(k))steerTo(+k-1);
+});
+document.addEventListener("keyup",e=>{
+  const k=e.key.toLowerCase();
+  if(k==="arrowup"||k==="w"||k===" ")keys.gas=false;
+  if(k==="arrowdown"||k==="s")keys.brake=false;
 });

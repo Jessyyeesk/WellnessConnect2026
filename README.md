@@ -1,6 +1,6 @@
 # Sunway College Ipoh Wellness Connect
 
-A comedy action-adventure learning game about physical health, major depressive disorder, mood disorders and schizophrenia. 15 questions, about 15 minutes, ages 6 to 70. Plain HTML, CSS and JavaScript. No backend, API key or build step.
+A comedy car-racing learning game about blood pressure, diabetes, and mental wellness (stress, anxiety, depression) with coping skills. 15 questions, about 15 minutes, ages 6 to 70. Plain HTML, CSS and JavaScript. No backend, API key or build step.
 
 ## Files
 - `index.html` page structure
@@ -21,9 +21,7 @@ Double-click `index.html`, or run `python3 -m http.server` in this folder and op
 Open `script.js` and edit the `QUESTIONS` list at the top. Each item has `t` (topic), `q` (question), `o` (exactly 4 options), `a` (index 0 to 3 of the correct option) and `e` (explanation). Options are shuffled automatically. The last question is the final "new example" check and always uses multiple choice.
 
 ## Manual test checklist
-- Play, How to play and Back to home buttons work
-- Shooting round: click/tap a sign, and keys 1 to 4, answer once only
-- Racing round: Start engine, steer with arrows, A/D, lane taps and buttons
+- Race: hold gas (↑/W or GAS button), steer, car reaches the gate and locks in one answer
 - Feedback shows an explanation and Continue moves on
 - Score rises by 10 only on first-try correct answers; repeated clicks do not double count
 - Untimed mode makes every round plain multiple choice

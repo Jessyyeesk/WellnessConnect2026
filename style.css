@@ -29,10 +29,10 @@ h2{font-size:1.2rem;margin:.8em 0 .3em}
 #arena.shoot{height:296px;background:linear-gradient(#bfe9f7,#e9f9d8)}
 .target{position:absolute;left:0;width:62%;height:62px;font:inherit;font-size:.85rem;font-weight:bold;line-height:1.2;background:#fff;border:3px solid var(--pink);border-radius:50px;padding:2px 12px;cursor:crosshair;display:flex;align-items:center;gap:6px;text-align:left}
 .target i{font-style:normal;background:var(--pink);color:#fff;border-radius:50%;min-width:24px;height:24px;display:grid;place-items:center}
-#arena.race{height:340px;display:grid;grid-template-columns:repeat(4,1fr);background:#555}
-.lane{position:relative;border-right:3px dashed #fff8}.lane:last-child{border:0}
-.gate{position:absolute;left:8%;width:84%;height:48px;top:-60px;background:var(--sun);border:3px solid var(--ink);border-radius:8px;display:grid;place-items:center;font-weight:bold;font-size:1.4rem}
-.car{position:absolute;bottom:8px;font-size:2.4rem;transition:left .15s;width:25%;text-align:center}
+#arena.race{height:360px;display:grid;grid-template-columns:repeat(4,1fr);background:repeating-linear-gradient(#4a4a4a 0 28px,#555 28px 56px);border-color:#222}
+.lane{position:relative;border-right:4px dashed #fffa;cursor:pointer}.lane:last-child{border:0}
+.gate{position:absolute;left:6%;width:88%;height:54px;top:0;background:repeating-conic-gradient(#fff 0 25%,#222 0 50%) 0 0/20px 20px;border:3px solid var(--ink);border-radius:8px;display:grid;place-items:center;font-weight:bold;font-size:1.5rem;color:var(--ink);text-shadow:0 0 6px #fff,0 0 6px #fff,0 0 6px #fff}
+.car{position:absolute;bottom:8px;left:25%;font-size:2.4rem;width:25%;text-align:center;line-height:1;pointer-events:none;transform:rotate(-90deg) scaleX(-1)}
 #legend{display:grid;gap:4px;font-size:.95rem}
 #legend div{background:#fff;border:2px solid var(--ink);border-radius:10px;padding:4px 10px}
 .ok{background:#d9f7e0!important;border-color:var(--ok)!important}.bad{background:#fde1e1!important;border-color:var(--bad)!important}
@@ -43,3 +43,4 @@ h2{font-size:1.2rem;margin:.8em 0 .3em}
 .rv{background:#fff;border:3px solid var(--ink);border-radius:12px;padding:8px 12px;margin:8px 0}.rv.g{border-color:var(--ok)}.rv.m{border-color:var(--bad)}
 @media(max-width:480px){html{font-size:16px}h1{font-size:1.6rem}.target{font-size:.75rem;height:60px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+#gasBtn{background:var(--ok)}#brakeBtn{background:var(--bad)}.btn{touch-action:none;user-select:none}

@@ -1,32 +1,64 @@
 # Sunway College Ipoh Wellness Connect
 
-A comedy car-racing learning game about blood pressure, diabetes, and mental wellness (stress, anxiety, depression) with coping skills. 15 questions, about 15 minutes, ages 6 to 70. Plain HTML, CSS and JavaScript. No backend, API key or build step.
+An F1-style racing learning game about **blood pressure, diabetes, stress, anxiety and depression**, built for foundation-level students.
+Plain HTML, CSS and JavaScript. No backend, no API key, no build step.
 
 ## Files
-- `index.html` page structure
-- `style.css` styling and layout
-- `script.js` game logic and the editable question bank (top of file)
-- `README.md` this guide
+```
+wellness-connect/
+  index.html    page structure (home, instructions, game, results)
+  style.css     all styling
+  script.js     settings, QUESTION BANK (top of file) and game code
+  favicon.svg   site icon
+  README.md     this file
+```
 
 ## Test locally
-Double-click `index.html`, or run `python3 -m http.server` in this folder and open http://localhost:8000.
+1. Download or unzip the folder.
+2. Double-click `index.html` (it opens in your browser). Nothing else is needed.
+   Optional local server: run `python3 -m http.server 8000` in the folder, then open http://localhost:8000.
 
-## Publish on GitHub Pages
-1. Create a new public repository on github.com.
-2. Upload `index.html`, `style.css`, `script.js` and `README.md` to the repository root (Add file > Upload files > Commit).
-3. Go to Settings > Pages. Under Build and deployment choose Deploy from a branch, branch `main`, folder `/ (root)`, then Save.
-4. After a minute your site appears at `https://YOUR-USERNAME.github.io/REPOSITORY-NAME/`.
+## Publish with GitHub Pages
+1. Create a GitHub account and click **New repository** (for example `wellness-connect`, set to Public).
+2. Click **uploading an existing file**, drag in `index.html`, `style.css`, `script.js`, `favicon.svg` and `README.md`, then **Commit changes**. `index.html` must be in the repository root, not inside a sub-folder.
+3. Go to **Settings > Pages**. Under **Build and deployment**, set Source to **Deploy from a branch**, choose branch **main** and folder **/ (root)**, then **Save**.
+4. After a minute or two the site appears at `https://YOUR-USERNAME.github.io/wellness-connect/`.
 
-## Edit questions
-Open `script.js` and edit the `QUESTIONS` list at the top. Each item has `t` (topic), `q` (question), `o` (exactly 4 options), `a` (index 0 to 3 of the correct option) and `e` (explanation). Options are shuffled automatically. The last question is the final "new example" check and always uses multiple choice.
+All file paths are relative, so the site works at that project address.
 
-## Manual test checklist
-- Race: hold gas (↑/W or GAS button), steer, car reaches the gate and locks in one answer
-- Feedback shows an explanation and Continue moves on
-- Score rises by 10 only on first-try correct answers; repeated clicks do not double count
-- Untimed mode makes every round plain multiple choice
-- Results show stars and review; Retry missed, Play again, Home and Restart work
-- Check a phone-width window (about 360px)
+## Edit the questions
+Open `script.js`. The **QUESTION BANK** is at the top. Each question looks like this:
+```js
+{
+  topic: "Label shown above the question",
+  text: "The question?",
+  correct: "The correct answer",
+  wrong: [
+    ["Wrong answer 1", "Why it is wrong"],
+    ["Wrong answer 2", "Why it is wrong"]
+  ],
+  explain: "Explanation shown after answering"
+}
+```
+Keep one correct and two wrong answers. Answer positions (A, B, C) are shuffled every game. Add `final: true` to mark a final challenge. The total score and progress bar adjust automatically when you add or remove questions. Race length and speed can be changed in `SETTINGS`.
 
-## Disclaimer
-Educational only. It does not diagnose. If you are worried about your health, see a doctor or counsellor. In an emergency in Malaysia, call 999.
+## Game design
+- **Race mode:** the car drives itself toward a gate with three lanes (A, B, C). Students steer into a lane to answer. Cones only slow the car and never affect the score. Lock in boosts the car to the gate. Pause is available.
+- **Study mode (untimed):** nothing moves until the student presses Lock in.
+- **Scoring:** 2 points for a correct first try, 1 for a correct second try, 0 otherwise (max 20). Speed and cones never change the learning score.
+- After a wrong answer the student sees why, the lane closes, and they can try again.
+- Question 10 is a new-example check (Hafiz) that combines the earlier ideas.
+- Controls: arrow keys or A/D to steer, 1/2/3 to pick a lane, Space or Enter to lock in, P or Esc to pause. Touch: on-screen buttons, tap a lane or an answer card.
+
+## Testing checklist
+- [ ] Play opens instructions, Start the race opens question 1
+- [ ] Steering (keys, buttons, tapping lanes and answer cards) moves the car
+- [ ] Lock in works in both modes, and repeated presses do not score twice
+- [ ] Correct, wrong-first-try and wrong-second-try feedback all show an explanation and wait for Continue
+- [ ] Score, progress bar and question counter update
+- [ ] Final screen shows score, review of all 10 questions and help numbers
+- [ ] Restart, Home and Play again work
+- [ ] Works on a phone-sized screen
+
+## Notes
+Health content is educational only and not medical advice. Helpline numbers (Befrienders KL 03-7627 2929, Talian Kasih 15999) should be re-checked from time to time.

@@ -4,77 +4,201 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sunway College Ipoh Wellness Connect</title>
-<meta name="description" content="A comedy action-adventure game about health.">
+<meta name="description" content="An F1-style racing game that teaches blood pressure, diabetes, stress, anxiety and depression, and how to look after your body and mind.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<header class="topbar">
+  <img src="favicon.svg" alt="" width="32" height="32">
+  <span class="brand">Sunway College Ipoh <b>Wellness Connect</b></span>
+</header>
+
 <main>
-<section id="home" class="screen on">
-  <div class="logo" aria-hidden="true">🏎️🩺🏁</div>
-  <h1>Sunway College Ipoh<br>Wellness Connect</h1>
-  <p class="lead">Join Dr. Giggles in a wacky race through Wellness Town. Hold the gas, steer into the gate with the right answer and learn how to look after your blood pressure, blood sugar and mind.</p>
-  <div class="card">
-    <h2>What you will learn</h2>
-    <ul><li>Signs, risks and healthy habits for high blood pressure and diabetes</li><li>What stress, anxiety and depression look like</li><li>Practical coping skills and when to ask for help</li></ul>
-    <p class="small">15 questions · about 15 minutes · ages 6 to 70 · no timer pressure</p>
+
+<!-- ============ HOME ============ -->
+<section id="home" class="screen">
+  <div class="hero">
+    <p class="eyebrow">Foundation Health Series &middot; Physical &amp; Mental Health</p>
+    <h1>Wellness <span>Connect</span></h1>
+    <p class="lead">Drive an F1 car down the pit straight, steer into the lane that holds the right answer, and learn how to protect your body and your mind.</p>
+    <div class="flagstrip" aria-hidden="true"></div>
   </div>
-  <label class="check"><input type="checkbox" id="untimed"> Untimed quiz mode (no driving, answer by tapping)</label>
-  <div class="row"><button class="btn big" id="playBtn">Play</button><button class="btn alt" id="howBtn">How to play</button></div>
-  <p class="small note">Educational game only. It cannot diagnose anyone. If you are worried about your health, speak to a doctor or counsellor. In an emergency in Malaysia, call 999.</p>
+
+  <div class="grid2">
+    <article class="card">
+      <h2>What you will learn</h2>
+      <ul>
+        <li>Why looking after your <b>physical and mental health</b> matters.</li>
+        <li>How to <b>take care</b> of your health every day, including coping with stress.</li>
+        <li>The <b>warning signs</b> of high blood pressure, diabetes, anxiety and depression, and when to ask for help.</li>
+      </ul>
+    </article>
+    <article class="card">
+      <h2>The race at a glance</h2>
+      <ul>
+        <li><b>10 questions</b>, about <b>10 minutes</b>, moderate difficulty.</li>
+        <li>Each question ends at a gate with three lanes: <b>A, B, C</b>. Drive through one lane to answer.</li>
+        <li>You get <b>feedback and an explanation</b> every time, and a second try if you miss.</li>
+        <li>Your score shows <b>what you learned</b>, not how fast you drive.</li>
+      </ul>
+    </article>
+  </div>
+
+  <article class="card">
+    <h2>Pit-lane briefing <small>(optional reading before you race)</small></h2>
+    <details>
+      <summary>Blood pressure and hypertension</summary>
+      <p>Blood pressure is the force of blood pushing against the walls of your arteries. It is written as two numbers in mmHg, for example 120/80. Around 120/80 is healthy. Readings of 140/90 or higher on repeated checks suggest <b>high blood pressure (hypertension)</b>.</p>
+      <p>Hypertension often has <b>no symptoms</b>, so the only way to know is to have it measured. Left untreated it raises the risk of heart attack, stroke and kidney disease.</p>
+      <p><b>Care:</b> eat less salt and fewer processed foods, be active (about 150 minutes a week), keep a healthy weight, do not smoke, limit alcohol if you drink, manage stress, sleep well, and take prescribed medicine.</p>
+    </details>
+    <details>
+      <summary>Diabetes</summary>
+      <p>Insulin moves sugar (glucose) from the blood into your cells for energy. In <b>diabetes</b> the body makes too little insulin or cannot use it well, so blood sugar stays too high. Type 2 diabetes is the most common type.</p>
+      <p><b>Warning signs:</b> feeling very thirsty, passing urine often, tiredness, blurred vision, wounds that heal slowly, tingling hands or feet, and unexplained weight loss. A simple blood test confirms it.</p>
+      <p><b>Care:</b> choose water over sweetened drinks, eat more vegetables and wholegrains, be active, keep a healthy weight, get screened, and take medicine or insulin exactly as prescribed.</p>
+    </details>
+    <details>
+      <summary>Mental wellness: stress, anxiety and depression</summary>
+      <p><b>Stress</b> is your reaction to pressure, such as exams or deadlines. It usually eases when the demand passes. <b>Anxiety</b> is ongoing, excessive worry or fear, often with a racing heart, restlessness or trouble concentrating, even when nothing dangerous is happening. <b>Depression</b> is a low or empty mood, or loss of interest, lasting two weeks or more, often with changes in sleep, appetite and energy, and feelings of worthlessness.</p>
+      <p><b>Coping:</b> slow deep breathing, regular exercise, enough sleep, balanced meals, breaking big tasks into small steps, short breaks, hobbies, limiting caffeine and late-night screens, and <b>talking to someone you trust</b>. Do not use alcohol or other substances to cope. A counsellor or doctor can help, and these conditions are treatable.</p>
+    </details>
+  </article>
+
+  <article class="card">
+    <h2>Choose your mode</h2>
+    <div class="modes">
+      <label class="mode"><input type="radio" name="mode" value="race" checked>
+        <span><b>Race mode</b><br>The car drives itself toward the gate. You steer. Cones only slow you down. Pause any time.</span></label>
+      <label class="mode"><input type="radio" name="mode" value="study">
+        <span><b>Study mode (untimed)</b><br>No pressure. The car waits at the start line. Pick a lane, read at your own pace, then lock in.</span></label>
+    </div>
+    <button id="playBtn" class="btn primary big" type="button">&#9654; Play</button>
+  </article>
+
+  <p class="note">This game is for learning only and is not medical advice. If you are worried about your health, speak to a doctor, nurse or college counsellor.</p>
 </section>
 
-<section id="how" class="screen">
-  <h1>How to play</h1>
-  <div class="card">
-    <h2>Race to the right answer</h2>
-    <p>Read the question and answers A to D. Your car only moves when you speed up, so hold <b>gas</b> to race up the track and steer into the gate with the answer you choose. Crossing the finish line locks in your answer.</p>
-    <p><b>Keyboard:</b> ↑ or W = gas, ↓ or S = brake, ← → or A / D = steer, 1 to 4 = jump to a lane.</p>
-    <p><b>Mobile:</b> hold the GAS button, tap BRAKE, use ◀ ▶ or tap a lane.</p>
-    <h2>Scoring</h2>
-    <p>10 points for each correct answer on the first try. Driving speed, crashes and time never change your score, only your answer does. You can pause driving at any time by letting go of the gas.</p>
-    <p>After each race you see an explanation. Press <b>Continue</b> when ready. At the end you get a star rating and can retry missed questions for practice.</p>
-    <p>Untimed quiz mode removes the driving and uses simple multiple choice.</p>
+<!-- ============ INSTRUCTIONS ============ -->
+<section id="how" class="screen" hidden>
+  <h1 class="h1s">How to play</h1>
+  <div class="grid2">
+    <article class="card">
+      <h2>Controls</h2>
+      <table class="ctl">
+        <tr><th>Action</th><th>Keyboard</th><th>Mouse / Touch</th></tr>
+        <tr><td>Steer left / right</td><td>&larr; &rarr; or A / D</td><td>&#9664; &#9654; buttons</td></tr>
+        <tr><td>Pick a lane directly</td><td>1, 2, 3</td><td>Tap an answer card or a lane on the track</td></tr>
+        <tr><td>Lock in answer</td><td>Space or Enter</td><td>Lock in button</td></tr>
+        <tr><td>Pause / resume</td><td>P or Esc</td><td>Pause button</td></tr>
+      </table>
+      <p>Lane <b>A</b> is the red (soft) lane, <b>B</b> is yellow (medium) and <b>C</b> is white (hard).</p>
+    </article>
+    <article class="card">
+      <h2>Rules and scoring</h2>
+      <ul>
+        <li>Read the question, then drive through the gate lane with the answer you choose.</li>
+        <li>In <b>Race mode</b> the car reaches the gate by itself. Lock in commits your lane and boosts you there.</li>
+        <li>In <b>Study mode</b> nothing moves until you press Lock in.</li>
+        <li><b>2 points</b> for a correct first try, <b>1 point</b> for a correct second try, <b>0</b> otherwise. Maximum 20.</li>
+        <li>After a wrong answer you see why, that lane closes, and you can try again.</li>
+        <li>Cones and speed <b>never</b> change your learning score.</li>
+        <li>Press <b>Continue</b> when you have finished reading each explanation.</li>
+      </ul>
+    </article>
   </div>
-  <button class="btn big" id="backHome">Back to home</button>
-</section>
-
-<section id="game" class="screen">
-  <div class="bar">
-    <button class="btn small" id="gHome">Home</button>
-    <button class="btn small" id="gRestart">Restart</button>
-    <span class="score" aria-live="polite">Score: <b id="score">0</b></span>
-  </div>
-  <div class="prog" role="progressbar" aria-label="Progress"><div id="progFill"></div></div>
-  <p class="small" id="qmeta"></p>
-  <h2 id="qtext" class="qtext"></h2>
-  <p class="small" id="hint"></p>
-  <div id="legend"></div>
-  <div id="arena"></div>
-  <p id="speedo" class="small hidden">Speed: <b id="speedVal">0</b> km/h</p>
-  <div id="carBtns" class="row hidden">
-    <button class="btn" id="leftBtn" aria-label="Steer left">◀</button>
-    <button class="btn alt big" id="gasBtn">GAS</button>
-    <button class="btn" id="brakeBtn">BRAKE</button>
-    <button class="btn" id="rightBtn" aria-label="Steer right">▶</button>
-  </div>
-  <div id="feedback" class="hidden" role="status" aria-live="polite">
-    <h3 id="fbTitle"></h3><p id="fbText"></p><p id="fbQuip" class="quip"></p>
-    <button class="btn big" id="contBtn">Continue</button>
-  </div>
-</section>
-
-<section id="results" class="screen">
-  <h1>Mission complete!</h1>
-  <div class="card center"><div class="stars" id="stars"></div><p class="bigscore"><span id="finalScore">0</span> / <span id="maxScore">0</span></p><p id="rating"></p><p id="pracMsg" class="small"></p></div>
   <div class="row">
-    <button class="btn" id="retryBtn">Retry missed questions</button>
-    <button class="btn" id="againBtn">Play again</button>
-    <button class="btn alt" id="rHome">Home</button>
+    <button id="startBtn" class="btn primary big" type="button">&#127937; Start the race</button>
+    <button id="howBackBtn" class="btn ghost big" type="button">Back</button>
   </div>
-  <h2>What we learned</h2>
-  <div id="review"></div>
 </section>
+
+<!-- ============ GAME ============ -->
+<section id="game" class="screen" hidden>
+  <div class="hud">
+    <div class="stat"><span>Question</span><strong id="hudQ">1 / 10</strong></div>
+    <div class="stat"><span>Learning score</span><strong id="hudScore">0 / 20</strong></div>
+    <div class="hudbtns">
+      <button id="pauseBtn" class="btn ghost sm" type="button">Pause</button>
+      <button id="restartBtn" class="btn ghost sm" type="button">Restart</button>
+      <button id="homeBtn" class="btn ghost sm" type="button">Home</button>
+    </div>
+  </div>
+  <div class="progress" aria-label="Race progress"><div id="progressFill"></div></div>
+  <div id="dots" class="dots" aria-hidden="true"></div>
+
+  <div class="arena">
+    <div class="qpanel">
+      <p id="qTag" class="tag"></p>
+      <h2 id="qText"></h2>
+      <div id="opts" class="opts"></div>
+      <p id="statusLine" class="status" aria-live="polite"></p>
+    </div>
+    <div class="trackbox">
+      <canvas id="track" aria-label="Racing track with three answer lanes A, B and C. Use the buttons or keyboard to steer."></canvas>
+      <div class="controls">
+        <button id="leftBtn" class="btn ghost" type="button" aria-label="Steer left">&#9664;</button>
+        <button id="lockBtn" class="btn primary" type="button">Lock in answer</button>
+        <button id="rightBtn" class="btn ghost" type="button" aria-label="Steer right">&#9654;</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="fbTitle">
+    <div id="fbCard" class="modal-card">
+      <h3 id="fbTitle"></h3>
+      <p id="fbPoints" class="pts"></p>
+      <div id="fbBody"></div>
+      <button id="fbBtn" class="btn primary big" type="button">Continue</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPLETION ============ -->
+<section id="end" class="screen" hidden>
+  <div class="hero">
+    <p class="eyebrow">Chequered flag</p>
+    <h1 id="endTitle">Race complete</h1>
+    <div class="flagstrip" aria-hidden="true"></div>
+  </div>
+  <div class="grid2">
+    <article class="card center">
+      <h2>Your learning result</h2>
+      <p class="bigscore"><span id="endScore">0</span> / <span id="endMax">20</span></p>
+      <p id="endPct" class="lead"></p>
+      <p id="endMsg"></p>
+    </article>
+    <article class="card">
+      <h2>Key takeaways</h2>
+      <ul>
+        <li>Blood pressure and blood sugar can be high <b>without symptoms</b>. Regular checks catch problems early.</li>
+        <li>Less salt, fewer sugary drinks, activity and sleep protect your body.</li>
+        <li>Stress is a reaction to pressure. Anxiety is persistent worry. Depression is a low mood or loss of interest lasting 2 weeks or more.</li>
+        <li>Coping skills: breathing, exercise, sleep, small steps, breaks and <b>talking to someone</b>.</li>
+      </ul>
+      <p class="muted" id="endDrive"></p>
+    </article>
+  </div>
+  <article class="card">
+    <h2>Review: explanations for every question</h2>
+    <div id="review"></div>
+  </article>
+  <article class="card help">
+    <h2>Need someone to talk to?</h2>
+    <p>If you or someone you know is struggling, speak to your college counsellor, a doctor, or a trusted adult. In Malaysia you can contact <b>Befrienders KL: 03-7627 2929</b> or <b>Talian Kasih: 15999</b>. In an emergency call <b>999</b>. Please check that numbers are still current.</p>
+  </article>
+  <div class="row">
+    <button id="againBtn" class="btn primary big" type="button">&#8635; Play again</button>
+    <button id="endHomeBtn" class="btn ghost big" type="button">Home</button>
+  </div>
+</section>
+
 </main>
+
+<footer class="foot">Sunway College Ipoh Wellness Connect &middot; Educational game, not medical advice.</footer>
+
 <script src="script.js"></script>
 </body>
 </html>
